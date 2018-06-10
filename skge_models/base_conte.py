@@ -155,6 +155,7 @@ class StochasticTrainer_ContE(object):
             self.epoch_start = timeit.default_timer()
 
             # process mini-batches
+            batch_idx = batch_idx.astype(int)
             b_i = 0
             for batch in np.split(idx, batch_idx):
                 b_i += 1
